@@ -8,12 +8,6 @@ class Shot(CircleShape):
         vel = pygame.Vector2(0, 1) * PLAYER_SHOOT_SPEED
         rotated_vel = vel.rotate(rotation)
         self.velocity = rotated_vel
-        # unit_vector = pygame.Vector2(0, 1)
-        # rotated_vector = unit_vector.rotate(rotation)
-        # rotated_speed_with_vector = rotated_vector * self.velocity
-        # self.position = rotated_speed_with_vector
-
-
 
     def draw(self, screen):
         pygame.draw.circle(screen, "red", self.position, self.radius, LINE_WIDTH)
